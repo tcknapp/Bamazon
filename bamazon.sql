@@ -18,15 +18,15 @@ USE bamazonDB;
 -- product table --
 CREATE TABLE products(
     item_id INT (11) AUTO_INCREMENT NOT NULL,
-    product_name VARCHAR(100),
-    department_name VARCHAR(100),
-    price DECIMAL (10,2),
-    stock_quantity INT default 0,
+    product_name VARCHAR(100) NOT NULL,
+    department_name VARCHAR(100) NOT NULL,
+    price DECIMAL (10,2) NOT NULL,
+    stock_quantity INT default 0 NOT NULL,
     PRIMARY KEY (item_id)
 );
 
 -- mock data --
-SELECT * FROM bamazonDB.products; 
+SELECT * FROM products; 
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ('Nixon 10', 'Watches', 400.00, 50),
@@ -37,7 +37,7 @@ VALUES ('Nixon 10', 'Watches', 400.00, 50),
         ('Galaxy Note 9', 'Phones', 899.99, 10),
         ('Yeezy Boosts', 'Shoes', 10.45, 322),
         ('Red Dead 2', 'Video Games', 59.99, 25),
-        ('Super Smash Bros Ultimate', 'Video Games', 59.99, 19),
+        ('Smash Bros Ultimate', 'Video Games', 59.99, 19),
         ('Limited Hoodie', 'Clothing', 89.12, 1);
 
 
