@@ -106,14 +106,31 @@ function buyShop() {
                     console.log("Your Total is: " + "$"+results[0].price * quantity);
                     //console.log("There are: " + results[0].stock_quantity + " left");
                   connection.query('UPDATE products SET stock_quantity = stock_quantity - ' + quantity + ' WHERE item_id = ' + chosenItem);
-            }
+                    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                }
             else {
                 console.log("Sorry, we only have " + results[0].stock_quantity + " in stock");
-              };
+              }
+            
+            buyAgain();
+          })
+          }
+        
+          function buyAgain(){
+            inquirer.prompt([{
+              type: "confirm",
+              name:"rebuy",
+              message:"Would you like to make another purchase?"
+            }]).then(function (answer){
+              if(answer.rebuy){
+                startShop();
+              }
+              else {
+                console.log("Thanks for shopping, Come back Soon!")
+              }
             });
-            startShop();
-          };
-  
+          }
+  // startShop();
     
       
       
