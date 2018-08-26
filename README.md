@@ -11,5 +11,5 @@ Make sure you save and require the MySQL and Inquirer npm packages in your homew
 #App in Action - Screenshots
 
 --Picture Example--
-![GitHub Logo](/images/logo.png)
+![Bamazon](assets/bamazon.gif)
 Format: ![Alt Text](url)
