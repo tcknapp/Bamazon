@@ -36,9 +36,9 @@ function startShop() {
   connection.query("SELECT * FROM products", function (err,results){
     if (err) throw err;
     console.log(" ")
-    console.log("==============*BAMAZON*=============")
+    console.log("===================*BAMAZON*==================")
     console.log(" ")
-    console.log("--------PRODUCTS-------")
+    console.log("--------------------PRODUCTS------------------")
 
     //display results in readable format 
     for(var i = 0; i< results.length; i++){
