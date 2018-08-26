@@ -104,8 +104,8 @@ function buyShop() {
             if (quantity <= results[0].stock_quantity) {
                     console.log("Thank You For Your Order of: " + results[0].product_name);
                     console.log("Your Total is: " + "$"+results[0].price * quantity);
-                    console.log("There are: " + results[0].stock_quantity + " left");
-                  connection.query('UPDATE products SET stock_quantity= ? WHERE item_id= ?', results[0].stock_quantity - quantity, chosenItem);
+                    //console.log("There are: " + results[0].stock_quantity + " left");
+                  connection.query('UPDATE products SET stock_quantity = stock_quantity - ' + quantity + ' WHERE item_id = ' + chosenItem);
             }
             else {
                 console.log("Sorry, we only have " + results[0].stock_quantity + " in stock");
