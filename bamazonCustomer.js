@@ -100,7 +100,7 @@ function buyShop() {
           connection.query('SELECT * FROM products WHERE item_id= ' + chosenItem, function(err,results) {
             //console.log(results);
             //console.log(quantity);
-            if(err) throw err;
+            //if(err) throw err;
             if (quantity <= results[0].stock_quantity) {
                     console.log("Thank You For Your Order of: " + results[0].product_name);
                     console.log("Your Total is: " + "$"+results[0].price * quantity);
@@ -110,8 +110,8 @@ function buyShop() {
             else {
                 console.log("Sorry, we only have " + results[0].stock_quantity + " in stock");
               };
-              startShop();
             });
+            startShop();
           };
   
     
