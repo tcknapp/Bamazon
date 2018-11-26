@@ -14,7 +14,7 @@ App in Action
 
 
 
-Screenshots
+##Screenshots
 
 The customer chooses an ID and quantity of product desired. If item and quantity are available,
 they are given a check-out with an updated price. They are then asked if they want to make another purchase.
@@ -27,4 +27,10 @@ If the customer wants to make another purchase, the inventory list is shown agai
 If there is none of that item in stock, they are alerted there is none available.
 ![NoStock](assets/nostock.png)
 
+- - -
+### Technologies Used
+* MySQL
+* JavaScript
+* Inquirer
+* CLI
 
